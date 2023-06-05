@@ -1,7 +1,5 @@
-import { answer } from './answer';
-function render() {
-  document.getElementById(
-    'root'
-  ).innerHTML = `The answer to the universe is ${answer}.`;
-}
-render();
+import axios from 'axios';
+
+axios.get(`https://jsonplaceholder.typicode.com/posts/1`)
+  .then(response => response.data)
+  .then(console.log)

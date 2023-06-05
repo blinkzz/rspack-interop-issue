@@ -31,6 +31,17 @@ const config = {
       ? path.resolve(__dirname, "webpack-dist")
       : path.resolve(__dirname, "rspack-dist"),
     filename: "main.js",
+    chunkFormat: "module",
+    chunkLoading: "import",
+    library: {
+      type: "module"
+    }
+  },
+  experiments: {
+    outputModule: true
+  },
+  externals: {
+    axios: "axios",
   },
   resolve: {
     alias: {
